@@ -71,10 +71,14 @@
             </div>
         </nav>
 
+        @include('components.errors');
+        {!! AlertManager::render() !!}
+
         @yield('content')
     </div>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
+    <script src="{{ asset('js/utils.js') }}"></script>
 </body>
 </html>
